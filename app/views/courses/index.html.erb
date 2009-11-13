@@ -1,0 +1,11 @@
+<h1>List of courses</h1>
+
+<%= link_to 'Add', new_course_url %>
+<br />
+<br />
+
+<% @courses.each do |course| %>
+	<a href="/courses/view/<%= course.id %>"><%= course.name %></a><br/>
+<% end %>
+
+

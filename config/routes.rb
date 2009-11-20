@@ -43,5 +43,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.resources :courses
+  map.resources :auth
+  map.resources :users
   map.root :controller => "courses"
 end

@@ -2,7 +2,7 @@
 
 <%= error_messages_for :course %>
 
-<% form_for @course, :url => { :action => :create } do |f| -%>
+<% form_for @course, {:html => {:class => 'validate'}, :url => { :action => :create }} do |f| -%>
 
 Name: <%= f.text_field :name %><br/>
 Description: <%= f.text_field :description %><br/>

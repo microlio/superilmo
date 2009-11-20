@@ -13,11 +13,17 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
+    
+    if not User.exists?(params[:id])
+      flash[:notice] = "User not found"
+      redirect_to(:action => "index")
+    else
+      @user = User.find(params[:id])
+      
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @user }
+      end
     end
   end
 
@@ -81,5 +87,13 @@ class UsersController < ApplicationController
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def password_check(pw1, pw2)
+    if pw1 == pw2
+      return true
+    end
+    
+    return false
   end
 end

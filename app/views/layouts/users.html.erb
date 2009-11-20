@@ -5,6 +5,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Users: <%= controller.action_name %></title>
+  <%= javascript_include_tag 'XMLHttpRequest' ,'v2.standalone.full.min', 'v2.config', 'v2.rails' %>
+  <%= javascript_for_validatious %>
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>

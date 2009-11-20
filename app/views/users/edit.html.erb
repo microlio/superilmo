@@ -1,8 +1,12 @@
 <h1>Editing user</h1>
 
-<% form_for(@user) do |f| %>
+<% form_for(@user, :html => {:class => 'validate'}) do |f| %>
   <%= f.error_messages %>
 
+	<p>
+		<%= f.label :username %><br />
+		<%= f.text_field :username %>
+	</p>
   <p>
     <%= f.label :firstname %><br />
     <%= f.text_field :firstname %>
@@ -10,6 +14,14 @@
   <p>
     <%= f.label :lastname %><br />
     <%= f.text_field :lastname %>
+  </p>
+	<p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+	<p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </p>
   <p>
     <%= f.submit 'Update' %>

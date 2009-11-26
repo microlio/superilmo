@@ -1,0 +1,6 @@
+<h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.name %></h2>
+ 
+Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+ 
+<br/>
+<%= link_to "Takaisin", course_instance_url(@eg.course_instance) %>

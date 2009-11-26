@@ -1,0 +1,16 @@
+<h1>Course <%= @courses.name %></h1>
+
+Name: <%= @courses.name %><br/>
+Description: <%= @courses.description %><br/>
+
+<% @courses.course_instances.each do |course| %>
+	<%= link_to course.name, course_instance_url(course) %><br/>
+<% end %>
+
+<br/>
+<%= link_to 'Back', :action=>'index' %><br/>
+<br/>
+
+
+
+

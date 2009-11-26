@@ -23,5 +23,10 @@ class ApplicationController < ActionController::Base
         redirect_to :controller => 'auth', :action => 'index'
       end
     end
+    
+    def set_locale
+      session[:locale] = params[:locale] if params[:locale]
+      I18n.locale = session[:locale]
+    end
   
 end

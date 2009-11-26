@@ -3,8 +3,14 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   validates_presence_of :firstname
   validates_presence_of :lastname
-  validates_presence_of :username
-  #validates_uniqueness_of :username
+  validates_presence_of :password
+  validates_uniqueness_of :username
+  validates_length_of :username, :in => 8..16
+
+  attr_accessor :password, :password_confirmation
+  validates_confirmation_of :password
+  validates_length_of :password, :in => 8..16, :allow_blank => true
+  validate :password_non_blank
 
   def password 
     @password
@@ -16,11 +22,6 @@ class User < ActiveRecord::Base
     create_new_salt 
     self.hashed_password = User.encrypted_password(self.password, self.salt)
   end
-  
-  attr_accessor :password_confirmation 
-  validates_confirmation_of :password
-  validates_length_of :password, :in => 5..200, :allow_blank => true
-  validate :password_non_blank 
   
   def self.authenticate(name, password) 
     user = self.find_by_username(name) 

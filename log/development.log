@@ -12274,3 +12274,1995 @@ Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 02:16:52) [GET]
 Rendering template within layouts/users
 Rendering users/edit
 Completed in 105ms (View: 90, DB: 4) | 200 OK [http://localhost/users/3/edit]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (19.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (216.7ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (130.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 15:34:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (36.6ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 196ms (View: 128, DB: 37) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 127.0.0.1 at 2009-11-20 15:34:05) [GET]
+  Parameters: {"action"=>"view", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mUser Load (12.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://localhost:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 528ms (DB: 13) | 302 Found [http://localhost/courses/view/119]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 127.0.0.1 at 2009-11-20 15:34:06) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://localhost/auth/login]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 127.0.0.1 at 2009-11-20 15:35:05) [GET]
+  Parameters: {"action"=>"view", "id"=>"122", "controller"=>"courses"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://localhost:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/courses/view/122]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 127.0.0.1 at 2009-11-20 15:35:05) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://localhost/auth/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#index (for 127.0.0.1 at 2009-11-20 15:51:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/index
+Completed in 23ms (View: 22, DB: 1) | 200 OK [http://localhost/auth/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-20 15:51:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (24.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 259ms (View: 98, DB: 25) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 15:51:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://localhost:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/users/1/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 127.0.0.1 at 2009-11-20 15:51:47) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://localhost/auth/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 127.0.0.1 at 2009-11-20 15:51:51) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"b1Ibf5rJWLlOITPr2/6rwxs0TiLaGoOmaRXHzQ0dTGE=", "username"=>"pff", "controller"=>"auth", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = E'pff') LIMIT 1[0m
+Redirected to http://localhost:3000/auth
+Completed in 15ms (DB: 3) | 302 Found [http://localhost/auth/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#index (for 127.0.0.1 at 2009-11-20 15:51:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/index
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://localhost/auth]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 15:51:57) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Redirected to http://localhost:3000/auth
+Filter chain halted as [:ownership] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/users/1/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#index (for 127.0.0.1 at 2009-11-20 15:51:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/index
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/auth]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 15:52:01) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 33ms (View: 18, DB: 4) | 200 OK [http://localhost/users/3/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-20 15:52:37) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"b1Ibf5rJWLlOITPr2/6rwxs0TiLaGoOmaRXHzQ0dTGE=", "id"=>"3", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"pff", "lastname"=>"loloc", "firstname"=>"gg", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 36ms (View: 18, DB: 4) | 200 OK [http://localhost/users/3]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-20 15:53:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."id" = E'3') LIMIT 1[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 23ms (View: 8, DB: 5) | 200 OK [http://localhost/users/3]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 15:53:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 29ms (View: 14, DB: 4) | 200 OK [http://localhost/users/3/edit]
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'pff') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.101 at 2009-11-26 21:20:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (104.2ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 436ms (View: 277, DB: 106) | 200 OK [http://192.168.1.105/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.101 at 2009-11-26 21:20:34) [GET]
+  Parameters: {"action"=>"view", "id"=>"122", "controller"=>"courses"}
+  [4;35;1mUser Load (13.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://192.168.1.105:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 147ms (DB: 14) | 302 Found [http://192.168.1.105/courses/view/122]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 192.168.1.101 at 2009-11-26 21:20:34) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 52ms (View: 50, DB: 1) | 200 OK [http://192.168.1.105/auth/login]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 21:59:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.9ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 20ms (View: 12, DB: 4) | 200 OK [http://192.168.1.105/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 21:59:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.3ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 21:59:16) [GET]
+  Parameters: {"action"=>"view", "id"=>"119", "controller"=>"courses"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://192.168.1.105:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://192.168.1.105/courses/view/119]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 192.168.1.103 at 2009-11-26 21:59:16) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://192.168.1.105/auth/login]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 21:59:21) [GET]
+  Parameters: {"action"=>"view", "id"=>"121", "controller"=>"courses"}
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) LIMIT 1[0m
+Redirected to http://192.168.1.105:3000/auth/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 12ms (DB: 2) | 302 Found [http://192.168.1.105/courses/view/121]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 192.168.1.103 at 2009-11-26 21:59:21) [GET]
+  Parameters: {"action"=>"login", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://192.168.1.105/auth/login]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 192.168.1.103 at 2009-11-26 21:59:27) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"BGelttT++MMc6utz1U1nkKzyXwhRV/l1I1ruvP6dVyo=", "username"=>"gg", "controller"=>"auth", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (73.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = E'gg') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering auth/login
+Completed in 92ms (View: 7, DB: 74) | 200 OK [http://192.168.1.105/auth/login]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+Migrating to CreateExerciseGroups (20091126194200)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (211.4ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126194200')[0m
+  [4;35;1mSQL (25.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#login (for 192.168.1.103 at 2009-11-26 22:00:44) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"BGelttT++MMc6utz1U1nkKzyXwhRV/l1I1ruvP6dVyo=", "username"=>"pff", "controller"=>"auth", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = E'pff') LIMIT 1[0m
+Redirected to http://192.168.1.105:3000/auth
+Completed in 16ms (DB: 3) | 302 Found [http://192.168.1.105/auth/login]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing AuthController#index (for 192.168.1.103 at 2009-11-26 22:00:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/index
+Completed in 347ms (View: 345, DB: 1) | 200 OK [http://192.168.1.105/auth]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:00:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:00:50) [GET]
+  Parameters: {"action"=>"view", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (26.4ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.2ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 119) [0m
+Completed in 144ms (View: 36, DB: 30) | 200 OK [http://192.168.1.105/courses/view/119]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:00:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:00:53) [GET]
+  Parameters: {"action"=>"view", "id"=>"121", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (0.9ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 121) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 121) [0m
+Completed in 28ms (View: 8, DB: 5) | 200 OK [http://192.168.1.105/courses/view/121]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:00:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.7ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:00:55) [GET]
+  Parameters: {"action"=>"view", "id"=>"120", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 120) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 120) [0m
+Completed in 92ms (View: 7, DB: 4) | 200 OK [http://192.168.1.105/courses/view/120]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:00:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:00:57) [GET]
+  Parameters: {"action"=>"view", "id"=>"122", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 122) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 122) [0m
+Completed in 28ms (View: 7, DB: 4) | 200 OK [http://192.168.1.105/courses/view/122]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:00:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:00:59) [GET]
+  Parameters: {"action"=>"view", "id"=>"123", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (0.9ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.1ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 123) [0m
+Completed in 89ms (View: 68, DB: 5) | 200 OK [http://192.168.1.105/courses/view/123]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:01:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#view (for 192.168.1.103 at 2009-11-26 22:01:02) [GET]
+  Parameters: {"action"=>"view", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/view
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 119) [0m
+Completed in 28ms (View: 8, DB: 5) | 200 OK [http://192.168.1.105/courses/view/119]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:01:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 21ms (View: 14, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:01:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:01:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"120", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 120) [0m
+Rendering template within layouts/application
+Rendering courses/show
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/courses/show.html.erb:
+2: 
+3: <%= error_messages_for :course %>
+4: 
+5: <% form_for @course, {:html => {:class => 'validate'}, :url => { :action => :create }} do |f| -%>
+6: 
+7: Name: <%= f.text_field :name %><br/>
+8: Description: <%= f.text_field :description %><br/>
+
+    app/views/courses/show.html.erb:5
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#new (for 192.168.1.103 at 2009-11-26 22:02:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+Errno::ENOENT (No such file or directory - /Users/sabba/Documents/rails/superilmo/app/views/courses/new.html.erb):
+  
+
+Rendered rescues/_trace (108.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#new (for 192.168.1.103 at 2009-11-26 22:02:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+Errno::ENOENT (No such file or directory - /Users/sabba/Documents/rails/superilmo/app/views/courses/new.html.erb):
+  
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:02:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.2ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/show
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/courses/show.html.erb:
+2: 
+3: <%= error_messages_for :course %>
+4: 
+5: <% form_for @course, {:html => {:class => 'validate'}, :url => { :action => :create }} do |f| -%>
+6: 
+7: Name: <%= f.text_field :name %><br/>
+8: Description: <%= f.text_field :description %><br/>
+
+    app/views/courses/show.html.erb:5
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:02:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"122", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 122) [0m
+Rendering template within layouts/application
+Rendering courses/show
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/courses/show.html.erb:
+2: 
+3: <%= error_messages_for :course %>
+4: 
+5: <% form_for @course, {:html => {:class => 'validate'}, :url => { :action => :create }} do |f| -%>
+6: 
+7: Name: <%= f.text_field :name %><br/>
+8: Description: <%= f.text_field :description %><br/>
+
+    app/views/courses/show.html.erb:5
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:04:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"121", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 121) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 121) [0m
+Completed in 23ms (View: 11, DB: 3) | 200 OK [http://192.168.1.105/courses/show/121]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:04:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.3ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#new (for 192.168.1.103 at 2009-11-26 22:04:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering courses/new
+Completed in 32ms (View: 13, DB: 2) | 200 OK [http://192.168.1.105/courses/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:04:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 123) [0m
+Completed in 85ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses/show/123]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:04:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:07:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.3ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 192.168.1.103 at 2009-11-26 22:08:14) [GET]
+
+ActionController::RoutingError (No route matches "/courses_instance" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 192.168.1.103 at 2009-11-26 22:08:20) [GET]
+
+ActionController::RoutingError (No route matches "/course_instances" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 192.168.1.103 at 2009-11-26 22:08:28) [GET]
+
+ActionController::RoutingError (No route matches "/course_instances/show" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:08:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (65.7ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 79ms (View: 8, DB: 67) | 200 OK [http://192.168.1.105/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:11:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 102ms (View: 88, DB: 3) | 200 OK [http://192.168.1.105/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:11:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.1ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 119) [0m
+Completed in 27ms (View: 14, DB: 3) | 200 OK [http://192.168.1.105/courses/show/119]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:11:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.4ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:11:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"119", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.3ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 119) [0m
+Completed in 311ms (View: 10, DB: 3) | 200 OK [http://192.168.1.105/courses/show/119]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 192.168.1.103 at 2009-11-26 22:12:20) [GET]
+
+ActionController::RoutingError (No route matches "/courses/1/implementations/3/exercise_groups/5" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:12:55) [GET]
+  Parameters: {"course_instance_id"=>"3", "action"=>"show", "id"=>"5", "controller"=>"exercise_groups", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find ExerciseGroup with ID=5):
+  app/controllers/exercise_groups_controller.rb:4:in `show'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "exercise_groups" ("created_at", "updated_at") VALUES('2009-11-26 20:14:06.186113', '2009-11-26 20:14:06.186113') RETURNING "id"[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:14:13) [GET]
+  Parameters: {"course_instance_id"=>"3", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.course) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:14:30) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"1"}
+  [4;36;1mExerciseGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.course) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mCourseInstance Load (20.9ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE (course_instances.id >= 0) ORDER BY course_instances.id ASC LIMIT 1000[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#1 (for 192.168.1.103 at 2009-11-26 22:17:20) [GET]
+  Parameters: {"action"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to 1. Actions: authorize, create, index, new, ownership, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:17:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.5ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 9, DB: 4) | 200 OK [http://192.168.1.105/courses/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:17:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"120", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.4ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 120) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.1ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 120) [0m
+Completed in 22ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses/show/120]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:17:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (3.0ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:17:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"119", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 119) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 119) [0m
+Completed in 23ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses/show/119]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:17:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.5ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 18ms (View: 10, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:17:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.4ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 123) [0m
+Completed in 22ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses/show/123]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (336.3ms)[0m   [0mINSERT INTO "course_instances" ("created_at", "updated_at", "course_id") VALUES('2009-11-26 20:17:51.424111', '2009-11-26 20:17:51.424111', 123) RETURNING "id"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:18:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.4ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://192.168.1.105/courses/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#1 (for 192.168.1.103 at 2009-11-26 22:18:02) [GET]
+  Parameters: {"action"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to 1. Actions: authorize, create, index, new, ownership, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:18:03) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"1"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.course) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (112.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:18:10) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.2ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.course) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mExerciseGroup Load (1.4ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+Migrating to CreateExerciseGroups (20091126194200)
+Migrating to AddFieldToExerciseGroup (20091126202024)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRuntimeError: ERROR	C42704	Mtype "course_instance_id" does not exist	P52	Fparse_type.c	L269	RtypenameType: ALTER TABLE "exercise_groups" ADD COLUMN "integer" course_instance_id[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+Migrating to CreateExerciseGroups (20091126194200)
+Migrating to AddFieldToExerciseGroup (20091126202024)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mALTER TABLE "exercise_groups" ADD COLUMN "course_instance_id" integer[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mExerciseGroup Load (1.5ms)[0m   [0mSELECT * FROM "exercise_groups" [0m
+  [4;36;1mCourseInstance Load (1.2ms)[0m   [0;1mSELECT * FROM "course_instances" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mExerciseGroup Update (0.8ms)[0m   [0;1mUPDATE "exercise_groups" SET "updated_at" = '2009-11-26 20:26:34.156736', "course_instance_id" = 1 WHERE "id" = 1[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:26:44) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.9ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.2ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+
+ActionView::TemplateError (undefined method `name' for "#<CourseInstance:0x1031944f8>":CourseInstance) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+Migrating to CreateExerciseGroups (20091126194200)
+Migrating to AddFieldToExerciseGroup (20091126202024)
+Migrating to AddFieldToCourseInstance (20091126202810)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mALTER TABLE "course_instances" ADD COLUMN "name" character varying(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126202810')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+Migrating to AddNameFieldToExerciseGroup (20091126202852)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "exercise_groups" ADD COLUMN "name" character varying(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126202852')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:29:14) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.1ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (0.9ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+
+ActionView::TemplateError (undefined method `group_num' for #<ExerciseGroup:0x1032c1d80>) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (114.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:29:17) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.1ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+
+ActionView::TemplateError (undefined method `group_num' for #<ExerciseGroup:0x1034766f8>) on line #1 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.group_num %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+
+    app/views/exercise_groups/show.html.erb:1
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:29:32) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.1ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+
+ActionView::TemplateError (undefined method `teacher' for #<ExerciseGroup:0x10362bd68>) on line #3 of app/views/exercise_groups/show.html.erb:
+1: <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.name %></h2>
+2:  
+3: Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+4:  
+5: <br/>
+6: <%= link_to "Takaisin", course_instance_url(@eg.course_instance) %>
+
+    app/views/exercise_groups/show.html.erb:3
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:29:48) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.1ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+ERROR: compiling _run_erb_app47views47exercise_groups47show46html46erb RAISED compile error
+/Users/sabba/Documents/rails/superilmo/app/views/exercise_groups/show.html.erb:7: syntax error, unexpected kENSURE, expecting ')'
+/Users/sabba/Documents/rails/superilmo/app/views/exercise_groups/show.html.erb:9: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47exercise_groups47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>"; @output_buffer.concat(( @eg.course_instance.course.name ).to_s); @output_buffer.concat " / "; @output_buffer.concat(( @eg.course_instance.name ).to_s); @output_buffer.concat " / Ryhm\303\244: "; @output_buffer.concat((  @eg.name ).to_s); @output_buffer.concat "</h2>\n \nHarjoitusryhm\303\244n pit\303\244j\303\244: "
+
+; @output_buffer.concat(( #@eg.teacher ).to_s); @output_buffer.concat "<br/><br/>\n \n<br/>\n"
+
+
+; @output_buffer.concat(( link_to "Takaisin", course_instance_url(@eg.course_instance) ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/sabba/Documents/rails/superilmo/app/views/exercise_groups/show.html.erb:9:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/sabba/Documents/rails/superilmo/app/views/exercise_groups/show.html.erb:7: syntax error, unexpected kENSURE, expecting ')'
+/Users/sabba/Documents/rails/superilmo/app/views/exercise_groups/show.html.erb:9: syntax error, unexpected kEND, expecting ')') on line #7 of app/views/exercise_groups/show.html.erb:
+4:  
+5: <br/>
+6: <%= link_to "Takaisin", course_instance_url(@eg.course_instance) %>
+
+    app/views/exercise_groups/show.html.erb:9:in `compile!'
+
+Rendered rescues/_trace (39.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091110165227)
+Migrating to CreateUsers (20091113131835)
+Migrating to AddPasswordToUser (20091119112104)
+Migrating to AddNameToUser (20091119120204)
+Migrating to RemoveUserColumn (20091119154148)
+Migrating to CreateCourseInstances (20091120132903)
+Migrating to CreateExerciseGroups (20091126194200)
+Migrating to AddFieldToExerciseGroup (20091126202024)
+Migrating to AddFieldToCourseInstance (20091126202810)
+Migrating to AddNameFieldToExerciseGroup (20091126202852)
+Migrating to AddTeacherFieldToExerciseGroup (20091126203113)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mALTER TABLE "exercise_groups" ADD COLUMN "teacher" character varying(255)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ExerciseGroupsController#show (for 192.168.1.103 at 2009-11-26 22:31:30) [GET]
+  Parameters: {"course_instance_id"=>"1", "action"=>"show", "id"=>"1", "controller"=>"exercise_groups", "course_id"=>"123"}
+  [4;35;1mExerciseGroup Load (1.2ms)[0m   [0mSELECT * FROM "exercise_groups" WHERE ("exercise_groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Load (0.9ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances"."id" = 1) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+Completed in 34ms (View: 21, DB: 4) | 200 OK [http://192.168.1.105/courses/123/course_instances/1/exercise_groups/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CourseInstancesController#1 (for 192.168.1.103 at 2009-11-26 22:31:38) [GET]
+  Parameters: {"action"=>"1", "controller"=>"course_instances"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to 1. Actions: authorize, ownership, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CourseInstancesController#index (for 192.168.1.103 at 2009-11-26 22:31:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"course_instances"}
+
+ActionController::UnknownAction (No action responded to index. Actions: authorize, ownership, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CourseInstancesController#1 (for 192.168.1.103 at 2009-11-26 22:46:39) [GET]
+  Parameters: {"action"=>"1", "controller"=>"course_instances"}
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to 1. Actions: authorize, ownership, set_locale, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:46:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.4ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:46:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"120", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 120) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.1ms)[0m   [0mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 120) [0m
+Completed in 20ms (View: 8, DB: 3) | 200 OK [http://192.168.1.105/courses/show/120]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:46:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (2.3ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 9, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#show (for 192.168.1.103 at 2009-11-26 22:46:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"121", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM "courses" WHERE ("courses"."id" = 121) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.1ms)[0m   [0;1mSELECT * FROM "course_instances" WHERE ("course_instances".course_id = 121) [0m
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://192.168.1.105/courses/show/121]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#index (for 192.168.1.103 at 2009-11-26 22:46:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (2.4ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 16ms (View: 8, DB: 4) | 200 OK [http://192.168.1.105/courses]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#new (for 192.168.1.103 at 2009-11-26 22:46:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering courses/new
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://192.168.1.105/courses/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing CoursesController#new (for 192.168.1.103 at 2009-11-26 22:53:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering courses/new
+Completed in 116ms (View: 80, DB: 2) | 200 OK [http://192.168.1.105/courses/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.1ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (991.5ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (437.7ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (405.3ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (11.8ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (269.7ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (10.4ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (7.4ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (346.3ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (41.3ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (3151.2ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (67.6ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (14.9ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (28.0ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (25.6ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (16.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (106.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (59.1ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-26 21:26:09.576910', '2009-11-26 21:26:09.576910', E'gggggg') RETURNING "id"[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-26 21:26:09.658198', '2009-11-26 21:26:09.658198', E'gggggg') RETURNING "id"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-26 21:26:09.662383', '2009-11-26 21:26:09.662383', E'gggggg') RETURNING "id"[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (282.0ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (38.5ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.9ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.2ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (611.8ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.5ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mCourse Load (37.6ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY created_at DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (13.1ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (888.6ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (11.8ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (299.5ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.9ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (231.2ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.1ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (299.2ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (13.0ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (278.2ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (281.7ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (324.7ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (459.8ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (12.5ms)[0m   [0;1mDROP DATABASE IF EXISTS "superilmo_test"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET search_path TO public[0m
+  [4;35;1mSQL (338.7ms)[0m   [0mCREATE DATABASE "superilmo_test" ENCODING = 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mCREATE TABLE "course_instances" ("id" serial primary key, "course_id" integer, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE TABLE "courses" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE "exercise_groups" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "course_instance_id" integer, "name" character varying(255), "teacher" character varying(255)) [0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "created_at" timestamp, "updated_at" timestamp, "hashed_password" character varying(255), "salt" character varying(255), "username" character varying(255)) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126203113')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091110165227')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091113131835')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119112104')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091119120204')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091119154148')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120132903')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126194200')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202024')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091126202810')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091126202852')[0m

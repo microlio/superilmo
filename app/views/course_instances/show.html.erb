@@ -1,0 +1,10 @@
+<h2><%= @ci.course.name %> / <%= @ci.name %></h2>
+ 
+<ul>
+  <% @ci.exercise_groups.each do |eg| %>
+    <li><%= link_to eg.group_num, exercise_group_url(eg) %> </li>
+  <% end %>
+</ul>
+ 
+<br/>
+<%= link_to "Takaisin", course_url(@ci.course) %>

@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
      @courses = Course.find(:all)
   end
   
-  def view
+  def show
      @courses = Course.find(params[:id])
   end
   

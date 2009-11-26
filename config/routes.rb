@@ -42,8 +42,22 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  map.resources :courses
+  
   map.resources :auth
   map.resources :users
-  map.root :controller => "courses"
+  map.resources :course_instances
+  map.resources :exercise_groups
+  
+  map.resources :courses do |course|
+      course.resources :course_instances do |ci|
+        ci.resources :exercise_groups
+      end
+  end
+  
+#  map.namespace(:admin) do |admin|
+#    admin.resources :users
+#    admin.resources :courses
+#  end
+  
+  map.root :controller=>:courses, :action=>:index
 end

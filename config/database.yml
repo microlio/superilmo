@@ -42,10 +42,20 @@ test:
   username: ror
   password: gr5ykl8
 
+
 production:
   adapter: postgresql
   encoding: unicode
-  database: superilmo_production
+  database: ssamalet
   pool: 5
-  username: ror
-  password: gr5ykl8
+  username: ssamalet
+  password: dMUsXsVO
+
+
+#production:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: superilmo_production
+#  pool: 5
+#  username: ror
+#  password: gr5ykl8

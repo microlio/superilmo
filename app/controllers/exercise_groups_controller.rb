@@ -1,7 +1,23 @@
 class ExerciseGroupsController < ApplicationController
   
-  def show
-    @eg = ExerciseGroup.find(params[:id])
-  end
+  def index
+      @eg = ExerciseGroup.all
+    end
+
+    def show
+      @eg = ExerciseGroup.find(params[:id])
+    end
+
+    def create
+      # täällä luodaan exercise_grouppeja
+    end
+
+    def register
+      @eg = ExerciseGroup.find(params[:id])
+      @eg.users << session[:user_id]
+
+      redirect_to exercise_groups_url(:action => :show)
+    end
+  
   
 end

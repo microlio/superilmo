@@ -35,6 +35,7 @@ describe CoursesController do
  
     # ..but instead use mocks
     it "should find all courses" do
+      controller.should_receive(:authenticate_required).and_return(true)
       # we bypass hitting database and just check that method ".all" gets called
       # and returns mock object defined above
  
@@ -52,13 +53,13 @@ describe CoursesController do
  
     it "should find correct course" do
        # our before filter works also in here!
-       controller.should_receive(:authorize).and_return(true)
+       controller.should_receive(:authenticate_required).and_return(true)
  
        course_mock = mock_model(Course)
-       Course.should_receive(:find).with("12").and_return(course_mock)
+       Course.should_receive(:find_by_id).with("12").and_return(course_mock)
  
        # Rails stack converts integer 12 to "12", as our assertion in above shows
-       get :show, :id => 12
+       get :show, :id => 123
  
        assigns(:course).should == course_mock
     end

@@ -1,6 +1,12 @@
 <h2><%= @eg.course_instance.course.name %> / <%= @eg.course_instance.name %> / Ryhmä: <%=  @eg.name %></h2>
  
 Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
+
+<% if Registration.find_by_user_id(session[:user_id]).nil? %>
+	<%= link_to "Registration", :controller => :registrations, :action => :create, :exercise_group_id => @eg.id %>
+<% else %>
+	<p>Already registered to this group</p>
+<% end %>
  
 <br/>
-<%= link_to "Takaisin", course_instance_url(@eg.course_instance) %>
+<%= link_to "Takaisin", course_instance_path(@eg.course_instance) %>

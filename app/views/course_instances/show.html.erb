@@ -1,10 +1,17 @@
-<h2><%= @ci.course.name %> / <%= @ci.name %></h2>
+<h2><%= h @ci.course.name %> / <%=h @ci.name %></h2>
  
-<ul>
-  <% @ci.exercise_groups.each do |eg| %>
-    <li><%= link_to eg.group_num, exercise_group_url(eg) %> </li>
-  <% end %>
-</ul>
+<h3>Harjoitusryhmät:</h3>
+ 
+<% if @ci.exercise_groups.any? %>
+  <ul>
+    <% @ci.exercise_groups.each do |exercise_group| %>
+      <li><%= link_to exercise_group.name, course_course_instance_exercise_group_path(@ci.course, @ci, exercise_group) %></li>
+    <% end %>
+  </ul>
+ 
+<% else %>
+  <p>Ei harjoitusryhmiä.</p>
+<% end %>
  
 <br/>
-<%= link_to "Takaisin", course_url(@ci.course) %>
+<%= link_to 'Takaisin', course_path(@ci.course) %>

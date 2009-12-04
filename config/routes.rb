@@ -54,10 +54,19 @@ ActionController::Routing::Routes.draw do |map|
       end
   end
   
-#  map.namespace(:admin) do |admin|
-#    admin.resources :users
-#    admin.resources :courses
-#  end
+  map.namespace(:admin) do |admin|
+    admin.resources :users, :active_scaffold => true
+    admin.resources :courses, :active_scaffold => true
+    admin.resources :course_instances, :active_scaffold => true
+    admin.resources :exercise_groups, :active_scaffold => true
+  end
+  
+  map.resource :admin, :controller => :admin
+  
+  map.resources :registrations
+  
+  map.resource :newsfeed, :controller => :newsfeed
+  map.resource :mailer, :controller => :mailer
   
   map.root :controller=>:courses, :action=>:index
 end

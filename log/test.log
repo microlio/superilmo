@@ -708,3 +708,345 @@ Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
   [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
   [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398400.152936747085285', '2009-11-27 13:21:51.088947', '2009-11-27 13:21:51.088947', E'8b1835161e93dfe5ea41e58b6dc222013f2a6691', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:21:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 12) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:21:51.122976', '2009-11-27 13:21:51.122976', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:21:51.129423', '2009-11-27 13:21:51.129423', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:21:51.132085', '2009-11-27 13:21:51.132085', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:21:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:21:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398400.458851081844395', '2009-11-27 13:22:36.814296', '2009-11-27 13:22:36.814296', E'1f81fb89c34acf64d502a2bb422bebfe24d513fc', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:22:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 12) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:36.847623', '2009-11-27 13:22:36.847623', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:36.853954', '2009-11-27 13:22:36.853954', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:36.856422', '2009-11-27 13:22:36.856422', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:22:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:22:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398400.516884136901315', '2009-11-27 13:22:49.541138', '2009-11-27 13:22:49.541138', E'82994afe5dfc54a5df4b55c4d51ab023c952fba1', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:22:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:49.574726', '2009-11-27 13:22:49.574726', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:49.581373', '2009-11-27 13:22:49.581373', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:22:49.583975', '2009-11-27 13:22:49.583975', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:22:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:22:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398400.46014104160278', '2009-11-27 13:35:22.553381', '2009-11-27 13:35:22.553381', E'2ad8fefba03d2aaa63d49d302bb3355c4f40c6f1', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:35:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:35:22.587060', '2009-11-27 13:35:22.587060', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:35:22.593153', '2009-11-27 13:35:22.593153', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:35:22.595587', '2009-11-27 13:35:22.595587', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:35:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:35:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398200.745462109540887', '2009-11-27 13:39:05.794830', '2009-11-27 13:39:05.794830', E'be578fa9baad77cd884dcfa2cdff33241d04e614', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:39:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:39:05.824411', '2009-11-27 13:39:05.824411', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:39:05.831382', '2009-11-27 13:39:05.831382', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:39:05.833919', '2009-11-27 13:39:05.833919', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:39:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.1ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:39:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaa') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = E'aaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = E'johndoee') LIMIT 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "users" ("salt", "created_at", "updated_at", "hashed_password", "username", "lastname", "firstname") VALUES(E'21729398200.990871450904915', '2009-11-27 13:40:06.132745', '2009-11-27 13:40:06.132745', E'06dd23d10fa45fae66a5afe07837639702fa9eba', E'johndoee', E'013333333', E'John Doe') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-27 15:40:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"123", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" WHERE ("courses"."id" = 123) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:40:06.163359', '2009-11-27 13:40:06.163359', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:40:06.169858', '2009-11-27 13:40:06.169858', E'ggggpf') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "courses" ("name", "created_at", "updated_at", "description") VALUES(E'Rails and rSpec', '2009-11-27 13:40:06.172366', '2009-11-27 13:40:06.172366', E'ggggpf') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:40:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 14) | 200 OK [http://test.host/courses]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-27 15:40:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM "courses" [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m

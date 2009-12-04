@@ -4,7 +4,7 @@ Name: <%= @courses.name %><br/>
 Description: <%= @courses.description %><br/>
 
 <% @courses.course_instances.each do |course| %>
-	<%= link_to course.name, course_instance_url(course) %><br/>
+	<%= link_to course.name, course_course_instances_path(@courses) + "/" + course.id.to_s %><br/>
 <% end %>
 
 <br/>

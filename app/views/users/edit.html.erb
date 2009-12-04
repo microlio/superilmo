@@ -1,6 +1,6 @@
 <h1>Editing user</h1>
 
-<% form_for(@user, :html => {:class => 'validate'}) do |f| %>
+<% form_for(@user, :html => {:class => 'validate', :multipart => true}) do |f| %>
   <%= f.error_messages %>
 
 	<p>
@@ -23,6 +23,12 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
+	
+	<p>
+	    <%= f.file_field :avatar %>
+	</p>
+	
+
   <p>
     <%= f.submit 'Update' %>
   </p>

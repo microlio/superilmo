@@ -3,7 +3,13 @@ class CoursesController < ApplicationController
 #  layout "application"
   
   def index
+     @newsfeed = Newsfeed.all
      @courses = Course.find(:all)
+     
+     respond_to do |format|
+       format.html
+       format.rss
+     end
   end
   
   def show
@@ -18,6 +24,7 @@ class CoursesController < ApplicationController
       @course = Course.new(params[:course])
       
       if @course.save
+     #   Newsfeed.course_added(@course)
         redirect_to(:action=>'index')
       else
         render :action=>:new

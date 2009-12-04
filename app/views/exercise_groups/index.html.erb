@@ -1,0 +1,14 @@
+<ul>
+  <% @eg.each do |exg| %>
+    <li>
+	<%= if not exg.id.nil?
+		link_to exg.name, :controller => :registrations, :action => :create, :exercise_group_id => @exg.id 
+	end %>
+      <ol>
+        <% exg.users.each do |u| %>
+          <li><%= u.name %></li>
+        <% end %>
+      </ol>
+    </li>
+  <% end %>
+</ul>

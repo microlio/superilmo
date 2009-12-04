@@ -1,6 +1,9 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  
+  has_attached_file :avatar, :styles => { :medium => "500x500>", :thumb => "100x100>" }
+  
   validates_presence_of :firstname
   validates_presence_of :lastname
   validates_presence_of :password
@@ -11,6 +14,12 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_length_of :password, :in => 8..16, :allow_blank => true
   validate :password_non_blank
+  
+  after_create :update_newsfeed
+  
+  has_many :registrations
+  has_many :exercise_groups, :through => :registrations
+  has_many :roles, :dependent => :destroy
 
   def password 
     @password
@@ -49,5 +58,9 @@ class User < ActiveRecord::Base
     string_to_hash = password + "wibble" + salt 
     Digest::SHA1.hexdigest(string_to_hash)
   end 
+  
+  def update_newsfeed
+      Newsfeed.user_registered(self)
+  end
   
 end

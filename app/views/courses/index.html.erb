@@ -4,6 +4,13 @@
 <br />
 <br />
 
+<h2>Newsfeed</h2>
+  <%=link_to "RSS Newsfeed", :action=>"index", :format=>"rss"%><br /><br />
+  <% @newsfeed.each do |n| %>
+<%=n.message%> <%=n.created_at%>
+<br />
+<% end %>
+
 <% @courses.each do |course| %>
 	<a href="/courses/show/<%= course.id %>"><%= course.name %></a><br/>
 <% end %>

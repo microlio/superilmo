@@ -45,6 +45,8 @@ role :db, "rails.cs.helsinki.fi", :primary => true
 namespace :deploy do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
+    run "sh /home/ssamalet/chmods.sh"
+    run "chmod a+x /home/ssamalet/superilmo_prj"
   end
 end
  

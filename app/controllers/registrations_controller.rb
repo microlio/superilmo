@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
         if (not @registrations.nil?) and @registrations.nitems >= ExerciseGroup.find(params[:exercise_group_id]).max_registrations
           redirect_to (:controller => :exercise_groups, :action => :show, :id => params[:exercise_group_id])
         else 
-          Registration.create :user_id => :user_id, :exercise_group_id => params[:exercise_group_id], :exam_id => 0
+          Registration.create :user_id => session[:user_id], :exercise_group_id => params[:exercise_group_id], :exam_id => 0
           Newsfeed.join_exercise_group(User.find(session[:user_id]), ExerciseGroup.find(params[:exercise_group_id]))
           redirect_to (:controller => :exercise_groups, :action => :show, :id => params[:exercise_group_id])
         end

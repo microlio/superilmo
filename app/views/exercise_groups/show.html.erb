@@ -7,6 +7,11 @@ Harjoitusryhmän pitäjä: <%= @eg.teacher %><br/><br/>
 <% else %>
 	<p>Already registered to this group</p>
 <% end %>
+
+<p>
+UserID: <br />
+<%= session[:user_id] %>
+</p>
  
 <br/>
 <%= link_to "Takaisin", course_instance_path(@eg.course_instance) %>

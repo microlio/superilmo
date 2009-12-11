@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091204035052) do
+ActiveRecord::Schema.define(:version => 20091211071834) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "course_instances", :force => true do |t|
     t.integer  "course_id"
@@ -23,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20091204035052) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+  end
+
+  create_table "exams", :force => true do |t|
+    t.integer  "course_id"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "exercise_groups", :force => true do |t|
@@ -31,6 +45,21 @@ ActiveRecord::Schema.define(:version => 20091204035052) do
     t.integer  "course_instance_id"
     t.string   "name"
     t.string   "teacher"
+    t.integer  "max_registrations"
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.text     "feedback"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "course_instance_id"
+  end
+
+  create_table "friendships", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "friend_id"
   end
 
   create_table "newsfeeds", :force => true do |t|
@@ -44,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20091204035052) do
     t.integer  "exercise_group_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "exam_id"
   end
 
   create_table "roles", :force => true do |t|
@@ -65,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20091204035052) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "friendship_id"
   end
 
 end

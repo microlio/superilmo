@@ -7,6 +7,12 @@ Description: <%= @courses.description %><br/>
 	<%= link_to course.name, course_course_instances_path(@courses) + "/" + course.id.to_s %><br/>
 <% end %>
 
+<p>Exams:</p>
+
+<% @courses.exams.each do |exam| %>
+	<%= link_to @courses.name, exam_path(@courses) %><br/>
+<% end %>
+
 <br/>
 <%= link_to 'Back', :action=>'index' %><br/>
 <br/>

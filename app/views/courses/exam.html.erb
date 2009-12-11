@@ -1,0 +1,10 @@
+h2><%= @course.name %></h2>
+
+<% if Registration.find_by_user_id(session[:user_id]).nil? %>
+	<%= link_to "Registration", :controller => :registrations, :action => :create, :exercise_group_id => @eg.id %>
+<% else %>
+	<p>Already registered to this group</p>
+<% end %>
+ 
+<br/>
+<%= link_to "Takaisin", course_instance_path(@eg.course_instance) %>

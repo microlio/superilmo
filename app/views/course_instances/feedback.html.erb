@@ -1,0 +1,11 @@
+<h1>Add new feedback</h1>
+
+<%= error_messages_for :feedback %>
+
+<% form_for @feedback, {:html => {:class => 'validate'}, :url => { :action => :save_feedback, :id => @ci.id }} do |f| -%>
+
+Feedback: <%= f.text_field :feedback %><br/>
+
+<%= f.submit 'Save' %>
+  
+<% end -%>

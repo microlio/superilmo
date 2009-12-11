@@ -1,6 +1,8 @@
 class Course < ActiveRecord::Base
   
+  belongs_to :categories
   has_many :course_instances, :dependent => :destroy
+  has_many :exams, :dependent => :destroy
 
   named_scope :all_in_order, :order => "created_at DESC"
   

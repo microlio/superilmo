@@ -7,6 +7,26 @@
   <%=h @user.firstname %>&nbsp;<%=h @user.lastname %>
 </p>
 
+<p>
+	<b>Exercise groups:</b>
+	<% @user.exercise_groups.each do |eg| %>
+		<%=h eg.name %>
+		<%=h eg.course_instance.name %>
+		<%=h eg.course_instance.course.name %>
+	<% end %>
+	<br />
+</p>
+
+<p>
+	<b>Friends:</b>
+	<% @user.friends.each do |f| %>
+		<%=h f.firstname %>
+		<%=h f.lastname %><br />
+		<%=h f.username %><br />
+	<% end %>
+	<br />
+</p>
+
 <%= image_tag @user.avatar.url %>
   <%= image_tag @user.avatar.url(:medium) %>
   <%= image_tag @user.avatar.url(:thumb) %>

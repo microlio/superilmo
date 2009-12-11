@@ -12,6 +12,15 @@
 <% else %>
   <p>Ei harjoitusryhmiä.</p>
 <% end %>
+
+<% @ci.feedbacks.each do |f| %>
+	
+	<p>
+	<%= f.created_at %>
+	<br />
+	<%= f.feedback %>
+	</p>
+<% end %>
  
 <br/>
 <%= link_to 'Takaisin', course_path(@ci.course) %>

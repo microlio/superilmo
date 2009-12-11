@@ -14,7 +14,10 @@ class ExerciseGroupsController < ApplicationController
 
     def register
       @eg = ExerciseGroup.find(params[:id])
-      @eg.users << session[:user_id]
+      
+      if @eg.users.nitems < @eg.max_registrations
+        @eg.users << session[:user_id]
+      end
 
       redirect_to exercise_groups_url(:action => :show)
     end

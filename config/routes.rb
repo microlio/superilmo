@@ -47,6 +47,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :course_instances
   map.resources :exercise_groups
+  map.resources :categories
+  map.resources :exams
   
   map.resources :courses do |course|
       course.resources :course_instances do |ci|
@@ -59,6 +61,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :courses, :active_scaffold => true
     admin.resources :course_instances, :active_scaffold => true
     admin.resources :exercise_groups, :active_scaffold => true
+    admin.resources :categories, :active_scaffold => true
   end
   
   map.resource :admin, :controller => :admin

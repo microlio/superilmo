@@ -20,7 +20,8 @@ class User < ActiveRecord::Base
   has_many :registrations
   has_many :exercise_groups, :through => :registrations
   has_many :roles, :dependent => :destroy
-
+  has_many :friendships
+  has_many :friends, :through => :friendships, :source => :user
   def password 
     @password
   end

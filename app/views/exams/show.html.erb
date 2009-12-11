@@ -1,0 +1,13 @@
+<h2>Exam: <%=  @ex.course.name %></h2>
+ 
+date: <%= @ex.date %><br/><br/>
+
+
+<% if Registration.find_by_sql('select * from registrations where exam_id =' + @ex.id.to_s + ' and user_id = ' + session[:user_id].to_s).empty? %>
+	<%= link_to "Registration", :controller => :registrations, :action => :exam, :exam_id => @ex.id %>
+<% else %>
+	<p>Already registered to this exam</p>
+<% end %>
+ 
+<br/>
+<%= link_to "Takaisin", course_path(@ex.course) %>

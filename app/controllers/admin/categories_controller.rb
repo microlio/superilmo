@@ -1,5 +1,5 @@
 class Admin::CategoriesController < AdminController
   
-  active_scaffold :categories
+#  active_scaffold :categories
   
 end

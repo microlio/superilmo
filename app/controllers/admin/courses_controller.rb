@@ -1,5 +1,5 @@
 class Admin::CoursesController < AdminController
 
-  active_scaffold :courses
+ # active_scaffold :courses
   
 end

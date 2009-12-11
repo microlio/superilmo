@@ -1,6 +1,6 @@
 class Admin::CourseInstancesController < AdminController
   
-  active_scaffold :course_instances
+#  active_scaffold :course_instances
 #    fb.columns.add :feedback
  # end
   
